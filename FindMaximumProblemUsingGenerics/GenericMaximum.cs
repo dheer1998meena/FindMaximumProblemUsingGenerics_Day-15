@@ -64,6 +64,13 @@ namespace FindMaximumProblemUsingGenerics
             T max = SortingNumber(inputValues);
             return max;
         }
-
+        // Using print the max value of generic.
+        public void printMaxGenericMethod()
+        {
+            T printMaxValue = PrintMethod();
+            Console.WriteLine("max from using parametrized constructor :" + printMaxValue);
+        }
     }
+
 }
+
