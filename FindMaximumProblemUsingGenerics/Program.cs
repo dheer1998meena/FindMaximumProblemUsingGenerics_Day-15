@@ -21,6 +21,16 @@ namespace FindMaximumProblemUsingGenerics
             {
                 Console.WriteLine(ex);
             }
+            //UC2 Finds max among the given three float number numbers
+            try
+            {
+                Console.WriteLine(FindMaximum.FindMaximumAmongThreeFloatNumber(1223.1, 1258.3, 1500.3));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            Console.ReadLine();
         }
     }
 }

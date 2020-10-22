@@ -46,5 +46,40 @@ namespace FindMaximumMsTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        // UC 2.1 : Given the maximum number at first position returns the same number as a float number.      
+        [TestMethod]
+        public void GivenMaxNumberAtFirstPositionReturnTheSameNumberWithFloat()
+        {
+            //Arrange
+            double expected = 2200.15;
+            //Act
+            double actual = FindMaximum.FindMaximumAmongThreeFloatNumber(2200.15, 100.12, 100.15);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        // UC 2.2 : Given the maximum number at secod position returns the same number as float number.      
+        [TestMethod]
+        public void GivenMaxNumberAtSecondPositionReturnTheSameNumberWithFloat()
+        {
+            //Arrange
+            double expected = 500.53;
+            //Act
+            double actual = FindMaximum.FindMaximumAmongThreeFloatNumber(100.5, 500.53, 100.15);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        // UC 2.3 : Given the maximum number at third position returns the same number as float number.      
+        [TestMethod]
+        public void GivenMaxNumberAtThirdPositionReturnTheSameNumberWithFloat()
+        {
+            //Arrange
+            double expected = 1000.56;
+            //Act
+            double actual = FindMaximum.FindMaximumAmongThreeFloatNumber(220.5, 100.12, 1000.56);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
