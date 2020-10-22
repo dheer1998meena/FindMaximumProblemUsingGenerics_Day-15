@@ -42,15 +42,18 @@ namespace FindMaximumProblemUsingGenerics
 
             //using parameterized constructor
             // using generics class Max number among three integer number
-            GenericMaximum<int> generic = new GenericMaximum<int>(12, 45, 63);
-            int intMax = generic.PrintMethod();
+            int[] intArray = new int[] { 12, 45, 63 , 52,69};
+            GenericMaximum<int> genericInt = new GenericMaximum<int>(intArray);
+            int intMax = genericInt.PrintMethod();
             Console.WriteLine("Maximum integer number Among three number:" + intMax);
             // using generics class Max number among three float number
-            GenericMaximum<double> generics = new GenericMaximum<double>(12.4, 45.5, 63.2);
-            double doubleMax = generics.PrintMethod();
+            double[] doubleArray = new double[] { 12.5, 45.7, 63.5,65,65.8 };
+            GenericMaximum<double> genericFloat = new GenericMaximum<double>(doubleArray);
+            double doubleMax = genericFloat.PrintMethod();
             Console.WriteLine("Maximum float number among three number :" + doubleMax);
             // using generics class Max number among three string number.
-            GenericMaximum<string> genericm = new GenericMaximum<string>("12","16", "50");
+            string[] stringArray = new string[] {"16","70","13","56","96"};
+            GenericMaximum<string> genericm = new GenericMaximum<string>(stringArray);
             string stringMax = genericm.PrintMethod();
             Console.WriteLine("Maximum string number among three number :" + stringMax);
             Console.ReadLine();
