@@ -81,5 +81,69 @@ namespace FindMaximumMsTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        // UC 3.1 : Given the maximum number at first position returns the same number as a string number.      
+        [TestMethod]
+        public void GivenMaxNumberAtFirstPositionReturnTheSameNumberWithString()
+        {
+            //Arrange
+            string expected = "Peach";  
+            //Act
+            string actual = FindMaximum.FindMaximumAmongThreeStringNumber("Peach", "Apple", "Banana");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        // UC 3.2 : Given the maximum number at Second position returns the same number as a string number.      
+        [TestMethod]
+        public void GivenMaxNumberAtSecondPositionReturnTheSameNumberWithString()
+        {
+            //Arrange
+            string expected = "Peach";
+            //Act
+            string actual = FindMaximum.FindMaximumAmongThreeStringNumber("Apple", "Peach", "Banana");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        // UC 3.3 : Given the maximum number at third position returns the same number as a string number.      
+        [TestMethod]
+        public void GivenMaxNumberAtThirdPositionReturnTheSameNumberWithString()
+        {
+            //Arrange
+            string expected = "Peach";
+            //Act
+            string actual = FindMaximum.FindMaximumAmongThreeStringNumber("Apple", "Banana", "Peach");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        // Test max int number using generic class.
+        public void GivenIntMaxNumberReturnTheSameNumberUsingGenerics()
+        {
+            //Arrange
+            int expected = 220;
+            //Act
+            int actual = GenericMaximum<int>.MaximumAmongThree(220, 101, 100);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        // Test max float number using generic class.
+        public void GivenFloatMaxNumberReturnTheSameNumberUsingGenerics()
+        {
+            //Arrange
+            double expected = 300.12;
+            //Act
+            double actual = GenericMaximum<double>.MaximumAmongThree(220.12, 300.12, 100.12);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        // Test max string number using generic class.
+        public void GivenStringMaxNumberReturnTheSameNumberUsingGenerics()
+        {
+            //Arrange
+            string expected = "100";
+            //Act
+            GenericMaximum<string> generic = new GenericMaximum<string>("12", "15", "100");
+            string actual =generic.PrintMethod();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
