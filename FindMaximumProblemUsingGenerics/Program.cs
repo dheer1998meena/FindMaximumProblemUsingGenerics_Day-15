@@ -52,10 +52,12 @@ namespace FindMaximumProblemUsingGenerics
             double doubleMax = genericFloat.PrintMethod();
             Console.WriteLine("Maximum float number among three number :" + doubleMax);
             // using generics class Max number among three string number.
-            string[] stringArray = new string[] {"16","70","13","56","96"};
+            string[] stringArray = new string[] {"16","68","13","56","55"};
             GenericMaximum<string> genericm = new GenericMaximum<string>(stringArray);
             string stringMax = genericm.PrintMethod();
             Console.WriteLine("Maximum string number among three number :" + stringMax);
+            GenericMaximum<int> generic = new GenericMaximum<int>(intArray);
+            genericInt.printMaxGenericMethod();
 
             Console.ReadLine();
         }

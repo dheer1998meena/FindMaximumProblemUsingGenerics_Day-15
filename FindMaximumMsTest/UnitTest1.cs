@@ -115,6 +115,7 @@ namespace FindMaximumMsTest
             Assert.AreEqual(expected, actual);
         }
         // Test max int number using generic class.
+        [TestMethod]
         public void GivenIntMaxNumberReturnTheSameNumberUsingGenerics()
         {
             //Arrange
@@ -125,6 +126,7 @@ namespace FindMaximumMsTest
             Assert.AreEqual(expected, actual);
         }
         // Test max float number using generic class.
+        [TestMethod]
         public void GivenFloatMaxNumberReturnTheSameNumberUsingGenerics()
         {
             //Arrange
@@ -135,13 +137,13 @@ namespace FindMaximumMsTest
             Assert.AreEqual(expected, actual);
         }
         // Test max string number using generic class.
+        [TestMethod]
         public void GivenStringMaxNumberReturnTheSameNumberUsingGenerics()
         {
             //Arrange
-            string expected = "100";
+            string expected = "Peach";
             //Act
-            GenericMaximum<string> generic = new GenericMaximum<string>("12", "15", "100");
-            string actual =generic.PrintMethod();
+            string actual = GenericMaximum<string>.MaximumAmongThree("Apple", "Banana", "Peach");
             //Assert
             Assert.AreEqual(expected, actual);
         }
